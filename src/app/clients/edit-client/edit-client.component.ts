@@ -61,4 +61,5 @@ export class EditClientComponent implements OnInit, OnDestroy {
     this.router.navigate(['clients/list'])
   }
 
+ 
 }

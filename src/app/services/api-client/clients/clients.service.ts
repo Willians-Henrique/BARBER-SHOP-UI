@@ -14,11 +14,10 @@ export class ClientsService implements IClientService {
 
   constructor(private http: HttpClient) { }
 
-  
-  save(request: SaveClientRequest): Observable<SaveClientResponse>{
+  save(request: SaveClientRequest): Observable<SaveClientResponse> {
     return this.http.post<SaveClientResponse>(`${this.basePath}clients`, request)
   }
-  update(id: number, request: UpdateClientRequest): Observable<UpdateClientResponse>{
+  update(id: number, request: UpdateClientRequest): Observable<UpdateClientResponse> {
     return this.http.put<UpdateClientResponse>(`${this.basePath}clients/${id}`, request)
   }
   delete(id: number): Observable<void> {
